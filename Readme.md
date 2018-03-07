@@ -12,7 +12,7 @@ Location
 
 Come prepared, read the [Prerequisites](Prerequisites.md)!
 
-Lab 1: Q&A
-Lab 2: Mijn CV (Luis) - Garantiebepaling
-Lab 3: Mijn CV (Luis) - Storing melden
-Lab 4: Mijn CV - Afspraak maken
+Lab 1: Q&A 
+Lab 2: Mijn CV (Luis) - Garantiebepaling 
+Lab 3: Mijn CV (Luis) - Storing melden 
+Lab 4: Mijn CV - Afspraak maken 
