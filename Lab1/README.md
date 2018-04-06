@@ -52,8 +52,7 @@ _Our second action is to run a request via Postman_
 
 14. Click on the **Body** tab.
 15. Select **Raw**
-16. On the body field add **{"question":"cw5"}** or **{"question":"hi"}**
-17. Click on **Send**, the following illustration is a sample result
+16. On the body field add **{"question":"cw5"}** or **{"question":"hi"}*17. Click on **Send**, the following illustration is a sample result
 
  ![Postman2](https://github.com/Rubicon-BV/GlobalAzureBootcamp2018/blob/master/Lab1/Pics/Postman2.png)
  
@@ -78,47 +77,21 @@ _Our third action is to create a bot via the Azure Bot Service and configure (an
 * Location (Select **West Europe”**)
 * Pricing Tier (choose **S1 Premium messages/unit**)
 * App name (in this example GABC-Testbot)
-* Bot Template (choose Question and Answer template)
-* App service plan (Create New)
-** Provide a name
-** Select “West Europe”
-i.	Azure storage (Create New)
-i.	Provide a name
-j.	Application Insights (choose On)
-k.	Location (Select “West Europe”)
-l.	Microsoft App ID and password (choose Auto create App ID and Password)
-
-#
-[ANNOTATION:
-
-BY &#39;Tim Lemmob&#39;
-ON &#39;2018-03-13T11:00:00&#39;TL
-NOTE: &#39;Even afstemmen of we de Free hier willen opgeven.&#39;]
-choose S1 Premium messages/unit)
-  6. App name (in this example GABC-Testbot)
-  7. Bot Template (choose Question and Answer template)
-  8. App service plan (Create New)
-    1. Provide a name
-    2. Select &quot;West Europe&quot;
-  9. Azure storage (Create New)
-    1. Provide a name
-  10. Application Insights (choose On)
-  11. Location (Select &quot;West Europe&quot;)
-  12.
-l.
-#
-[ANNOTATION:
-
-BY &#39;Tim Lemmob&#39;
-ON &#39;2018-03-13T11:03:00&#39;TL
-NOTE: &#39;Kan in principe weg, is de default instelling&#39;]
-Microsoft App ID and password (choose Auto create App ID and Password)
-7. Click on &quot;Create&quot;
-8. When the bot is finished click on the right side Go to resource
-9. On the left menu of the Bot click on Application settings
-10. Under the section App settings, you find:
-  1. QnAKnowledgebaseId (put your QandAmaker settings here, in our example 67c19131-d968-4a7e-9f16-feffb982d506)
-  2. QnASubscriptionKey (put your QandAmaker settings here, in our example 8e132c2e5c3b43d98c66aa88ee1e9f73)
-11. In the left menu of the Bot click on Test the Webchat
-  1. Type for example hi or CW 4/CW 5/CW 3 and see if the webchat gives you an answer
-12. In the left menu of the Bot click on Channels
+* Bot Template (choose **Question and Answer template**)
+* App service plan **(Create New**)
+* Provide a **name**
+* Select **West Europe**
+7. Azure storage (**Create New**)
+* Provide a **name**
+8. Application Insights (choose **On**)
+9. Location (Select **West Europe**)
+10. Microsoft App ID and password (choose **Auto create App ID and Password**)
+11. Click on **Create**
+12. When the bot is finished click on the right side **Go to resource**
+13. On the left menu of the Bot click on **Application settings**
+14. Under the section **App settings**, you find:
+* QnAKnowledgebaseId (put your QandAmaker settings here, in our example _67c19131-d968-4a7e-9f16-feffb982d506_)
+* QnASubscriptionKey (put your QandAmaker settings here, in our example _8e132c2e5c3b43d98c66aa88ee1e9f73_)
+15. In the left menu of the Bot click on **Test the Webchat**
+  1. Type for example _hi_ or _CW 4/CW 5/CW 3_ and see if the webchat gives you an answer
+12. In the left menu of the Bot click on **Channels**
