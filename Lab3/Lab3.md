@@ -1,4 +1,6 @@
-#Lab 3
+# Lab 3
+
+In Lab 3 we will connect the Bot to a Microsoft Dynamics CRM backend.   
 
 Open the Bot solution from Lab 2 in Visual Studio  
 Go to Tools - NuGet Package Manager - Manage NuGet Packages for Solution...  
