@@ -19,9 +19,9 @@ Create a new folder Dynamics under the SimpleEchoBot project and add the 4 class
 - DynamicsHelper.cs
 - Exceptions.cs
 
-Log in to the Azure portal and navigate to your web bot's App Service 
-Go to the Application settings blade under Settings
-Scroll down to Application settings, and use Add new setting to add the following settings:
+Log in to the Azure portal and navigate to your web bot's App Service  
+Go to the Application settings blade under Settings  
+Scroll down to Application settings, and use Add new setting to add the following settings:  
 
 - ResourceUrl
 - WebAPIUrl
