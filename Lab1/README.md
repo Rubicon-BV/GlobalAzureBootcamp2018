@@ -6,7 +6,7 @@ With optimized machine learning logic and the ability to integrate industry-lead
 ![QnA Maker Overview](https://github.com/Rubicon-BV/GlobalAzureBootcamp2018/blob/master/Lab1/Pics/botFrameworkArch.png)
 
 _Our first action is to create a Q and A maker service_
-1. Go to the website https://qnamaker.ai/;
+1. Go to the website https://qnamaker.ai/
 2. Click on **Create new service**;
 3. Fill in the **Name** of your service
 4. Choose for adding:
