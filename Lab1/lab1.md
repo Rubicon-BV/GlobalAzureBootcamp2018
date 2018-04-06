@@ -3,7 +3,7 @@
 **Microsoft QnA Maker** is a free, easy-to-use, REST API and web-based service that trains AI to respond to user's questions in a more natural, conversational way. Compatible across development platforms, hosting services, and channels, QnA Maker is the only question and answer service with a graphical user interface—meaning you don’t need to be a developer to train, manage, and use it for a wide range of solutions.
 With optimized machine learning logic and the ability to integrate industry-leading language processing with ease, QnA Maker distills masses of information into distinct, helpful answers.
 
-![QnA Maker Overview](https://github.com/Rubicon-BV/GlobalAzureBootcamp2018/blob/master/Lab1/botFrameworkArch.png)
+![QnA Maker Overview](https://github.com/Rubicon-BV/GlobalAzureBootcamp2018/blob/master/Lab1/Pics/botFrameworkArch.png)
 
 _Our first action is to create a Q and A maker service_
 1. Go to the website https://qnamaker.ai/;
@@ -20,7 +20,7 @@ _Our first action is to create a Q and A maker service_
 10. Click on **Publish** again
 11. **Save (by copy/paste)** the generated information. A sample of this information is illustrated in the image below.
 
-![QnA Maker2]()
+![QnA Maker2](https://github.com/Rubicon-BV/GlobalAzureBootcamp2018/blob/master/Lab1/Pics/samplehttprequest.png)
 
 ## Postman
 
