@@ -25,28 +25,21 @@ _Our first action is to create a Q and A maker service_
 
 **Postman** is a popular API client that makes it easy for developers to create, share, test and document APIs. This is done by allowing users to create and save simple and complex HTTP/s requests, as well as read their responses. 
 
-_Our second action is to run a request via Postman_
+Requirement: _You need to register an account to use Postman_
 
+_Our second action is to run a request via Postman_
 1. Go to [https://www.getpostman.com/apps](https://www.getpostman.com/apps)
 2. Download the [Windows app](https://app.getpostman.com/app/download/win64?_ga=2.73860118.544879161.1520368971-700872036.1520368971) (…if running on Windows)
-3.
-3.Install and run
-#
-[ANNOTATION:
-
-BY &#39;Tim Lemmob&#39;
-ON &#39;2018-03-13T09:18:00&#39;TL
-NOTE: &#39;Het is waarschijnlijk wel verstandig om ergens aan te geven dat er een account nodig is om gebruik te kunnen maken van Postman.&#39;]
- Postman
-4. Click on &quot;Request&quot;, located under the tab &quot;Create New&quot;
-5. Fill in the Name under &quot;Request name&quot;
-6. Click on &quot;+Create collection&quot; and enter a name. If you have a collection, choose a collection
-7. Click on &quot;Save&quot;
-8. Change the GET function into POST
-9. Copy the Host URL from the step 11 in the previous chapter and paste this HOST URL after the Post Function within Postman.
-10. Copy the POST URL from step 11 in the previous chapter and paste this URL after the HOST URL in the Post Function within Postman.
-11. Ensure &quot;Inherith auth from parent&quot; is selected as &quot;Type&quot; under the &quot;Authorization&quot; tab.
-12. Click on the &quot;Headers&quot; tab.
+3. Install and run
+4.	Click on **Request**, located under the tab _“Create new”_
+5.	Fill in the **Name** under _“Request name”_
+6. Click on **+Create collection”** and enter a name. If you have a collection, choose a collection
+7. Click on **Save**
+8. Change the _GET_ function into **POST**
+9. Copy the **Host URL** from _step 11_ in the previous chapter and paste this HOST URL after the Post Function within Postman.
+10. Copy the **POST URL** from _step 11_ in the previous chapter and paste this URL after the HOST URL in the Post Function within Postman.
+11. Ensure **Inherith auth from parent** is selected as **Type** under the _Authorization_ tab.
+12. Click on the **Headers** tab.
 13. Enter the following key/value pairs (gathered from the generated input from step 11 in the previous chapter):
 
 | Key | Value |
