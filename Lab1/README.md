@@ -22,7 +22,7 @@ _Our first action is to create a Q and A maker service_
 
 ![QnA Maker2](https://github.com/Rubicon-BV/GlobalAzureBootcamp2018/blob/master/Lab1/Pics/samplehttprequest.png)
 
-## Postman
+## 2. Postman
 
 **Postman** is a popular API client that makes it easy for developers to create, share, test and document APIs. This is done by allowing users to create and save simple and complex HTTP/s requests, as well as read their responses. 
 
