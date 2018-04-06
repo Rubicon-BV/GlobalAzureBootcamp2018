@@ -21,7 +21,7 @@ _Our first action is to create a Q and A maker service_
 11. **Save (by copy/paste)** the generated information. A sample of this information is illustrated in the image below.
  ![QnA Maker2]()
 
-##Postman
+## Postman
 
 **Postman** is a popular API client that makes it easy for developers to create, share, test and document APIs. This is done by allowing users to create and save simple and complex HTTP/s requests, as well as read their responses. 
 
