@@ -30,7 +30,7 @@ Requirement: _You need to register an account to use Postman_
 
 _Our second action is to run a request via Postman_
 1. Go to [https://www.getpostman.com/apps](https://www.getpostman.com/apps)
-2. Download the [Windows app](https://app.getpostman.com/app/download/win64?_ga=2.73860118.544879161.1520368971-700872036.1520368971) (…if running on Windows)
+2. Download the [Windows app](https://www.getpostman.com/apps) (…if running on Windows)
 3. Install and run
 4.	Click on **Request**, located under the tab _“Create new”_
 5.	Fill in the **Name** under _“Request name”_
