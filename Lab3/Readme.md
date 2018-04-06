@@ -4,7 +4,7 @@ In this LAB, we are going to connect our bot to a Microsoft Dynamics CRM backend
 
 Contents of this folder:
 
-[Lab 3.docx](Lab 3.docx) contains the instructions perform the steps for this LAB
+[Lab 3.docx](Lab%203.docx) contains the instructions perform the steps for this LAB  
 [Code](Code) contains example code you can use
 
 Good luck with the LAB!
