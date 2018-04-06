@@ -135,7 +135,7 @@ namespace SimpleEchoBot.Dialogs
                     context.Wait(MessageReceived);
                 }
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 await context.PostAsync("Can you give me your emailaddress?");
                 context.Wait(MessageReceived);

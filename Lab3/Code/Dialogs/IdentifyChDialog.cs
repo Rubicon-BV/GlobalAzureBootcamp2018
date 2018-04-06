@@ -33,7 +33,7 @@ namespace SimpleEchoBot.Dialogs
             PromptDialog.Confirm(
                     context,
                     AfterResetAsync,
-                    "Are you sure you want to skip cv identification?",
+                    "Are you sure you want to skip boiler identification?",
                     "Didn't get that!",
                     promptStyle: PromptStyle.Auto);
         }
@@ -48,7 +48,7 @@ namespace SimpleEchoBot.Dialogs
             }
             else
             {
-                await context.PostAsync($"Can you give me the name of your CV?");
+                await context.PostAsync($"Can you give me the name of your boiler?");
             }
 
             context.Wait(MessageReceived);
@@ -67,22 +67,22 @@ namespace SimpleEchoBot.Dialogs
 
             if (salesOrderDetailsList == null || salesOrderDetailsList.Count() <= 0)
             {
-                // No CV known
-                await context.PostAsync("No CH known.");
+                // No CH known
+                await context.PostAsync("Sorry, no boiler known in our system.");
             }
             else if (salesOrderDetailsList.Count() == 1)
             {
-                // 1 CV known
+                // 1 CH known
                 this.customerContext.CustomerCh = salesOrderDetailsList.FirstOrDefault();
                 context.Done(this.customerContext);
                 return;
             }
             else
             {
-                // More then 1 CV known
+                // More then 1 CH known
                 PromptDialog.Choice(
                     context: context,
-                    resume: this.ResumeAfterCvChoise,
+                    resume: this.ResumeAfterChChoise,
                     options: salesOrderDetailsList,
                     prompt: "We have multiple CH's, about wich one do you have a question?",
                     retry: "Sorry, didn't understand, can you select the right CH.",
@@ -94,7 +94,7 @@ namespace SimpleEchoBot.Dialogs
             context.Wait(MessageReceived);
         }
 
-        private async Task ResumeAfterCvChoise(IDialogContext context, IAwaitable<SalesOrderDetail> result)
+        private async Task ResumeAfterChChoise(IDialogContext context, IAwaitable<SalesOrderDetail> result)
         {
             var CustomerCh = await result;
             if (CustomerCh != null)
@@ -104,8 +104,8 @@ namespace SimpleEchoBot.Dialogs
                 return;
             }
 
-            // Still waiting for CV's?
-            await context.PostAsync("Sorry, didn't understand, can you select the right CH.");
+            // Still waiting for CH's?
+            await context.PostAsync("Sorry, didn't understand, can you select the right boiler.");
             context.Wait(MessageReceived);
         }
     }

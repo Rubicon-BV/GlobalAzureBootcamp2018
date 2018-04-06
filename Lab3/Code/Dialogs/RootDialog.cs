@@ -58,7 +58,7 @@ namespace SimpleEchoBot.Dialogs
             {
                 this.shouldContinueWithLastMessage = true;
                 this.lastMessage = result.Query;
-                await context.Forward(new IdentifyChDialog(customerContext), this.ResumeAfterCvIdentification, context.Activity, CancellationToken.None);
+                await context.Forward(new IdentifyChDialog(customerContext), this.ResumeAfterChIdentification, context.Activity, CancellationToken.None);
                 return;
             }
 
@@ -102,7 +102,7 @@ namespace SimpleEchoBot.Dialogs
             {
                 this.shouldContinueWithLastMessage = true;
                 this.lastMessage = result.Query;
-                await context.Forward(new IdentifyChDialog(customerContext), this.ResumeAfterCvIdentification, context.Activity, CancellationToken.None);
+                await context.Forward(new IdentifyChDialog(customerContext), this.ResumeAfterChIdentification, context.Activity, CancellationToken.None);
                 return;
             }
 
@@ -162,7 +162,7 @@ namespace SimpleEchoBot.Dialogs
             context.Wait(this.MessageReceived);
         }
 
-        private async Task ResumeAfterCvIdentification(IDialogContext context, IAwaitable<object> result)
+        private async Task ResumeAfterChIdentification(IDialogContext context, IAwaitable<object> result)
         {
             var newContext = await result as DynamicsContextController;
             this.customerContext = newContext;
