@@ -19,7 +19,8 @@ _Our first action is to create a Q and A maker service_
 9. After that click on **Publish**
 10. Click on **Publish** again
 11. **Save (by copy/paste)** the generated information. A sample of this information is illustrated in the image below.
- ![QnA Maker2]()
+
+![QnA Maker2]()
 
 ## Postman
 
@@ -46,13 +47,16 @@ _Our second action is to run a request via Postman_
 | --- | --- |
 | Ocp-Apim-Subscription-Key | …from step 11 |
 | Content-Type | …from step 11 |
+
  ![Postman1]()
 
 14. Click on the **Body** tab.
 15. Select **Raw**
 16. On the body field add **{"question":"cw5"}** or **{"question":"hi"}**
 17. Click on **Send**, the following illustration is a sample result
+
  ![Postman2]()
+ 
 18.	Click on **Save**
 
 **#
