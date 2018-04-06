@@ -1,0 +1,20 @@
+﻿<fetch top="50" >
+  <entity name="salesorderdetail" >
+    <attribute name="description" alias="description" />
+    <attribute name="productid" alias="productid" />
+    <attribute name="salesorderid" alias="salesorderid" />
+    <attribute name="uomid" alias="uomid" />
+    <attribute name="quantity" alias="quantity" />
+    <attribute name="baseamount" alias="baseamount" />
+    <link-entity name="product" from="productid" to="productid" alias="product" >
+      <attribute name="name" alias="productname" />
+    </link-entity>
+    <link-entity name="salesorder" from="salesorderid" to="salesorderid" alias="order" >
+      <attribute name="requestdeliveryby" alias="boughton" />
+      <filter type="and" >
+        <condition attribute="customerid" operator="eq" value="{0}" />
+      </filter>
+    </link-entity>
+  </entity>
+</fetch>
+
