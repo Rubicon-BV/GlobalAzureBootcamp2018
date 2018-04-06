@@ -14,4 +14,4 @@ Come prepared, read the [Prerequisites](Prerequisites.md)!
 
 [Lab 1: Q&A](/Lab1)  
 [Lab 2: My CH Boiler (Luis)](/Lab2)  
-[Lab 3: Connecct to CRM](/Lab3)
+[Lab 3: Connect to CRM](/Lab3)
