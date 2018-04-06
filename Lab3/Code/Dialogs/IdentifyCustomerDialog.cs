@@ -54,7 +54,7 @@ namespace SimpleEchoBot.Dialogs
 
             context.Wait(MessageReceived);
         }
-        
+
         // We route all intents to the same function, as we have one purpose. Identify the customer.
         [LuisIntent("None")]
         [LuisIntent("BrokenBoiler")]
@@ -66,11 +66,13 @@ namespace SimpleEchoBot.Dialogs
             try
             {
                 // If customer is already identified, make sure we don't ask it again.
-                if(customerContext.CustomerIdentified)
+                if (customerContext.CustomerIdentified)
                 {
                     context.Done(customerContext);
                     return;
                 }
+
+                // TODO: Identify based on skype username.
 
                 var emailAddress = result.Entities.FirstOrDefault(x => x.Type == "builtin.email")?.Entity;
                 var customerNumber = result.Entities.FirstOrDefault(x => x.Type == "builtin.number")?.Entity;
@@ -98,6 +100,7 @@ namespace SimpleEchoBot.Dialogs
                     return;
                 }
 
+                await context.PostAsync("Thanks, checking our system...");
                 var response = await DynamicsHelper<Contact>.HttpClient.GetAsync(requestContactsUri, HttpCompletionOption.ResponseHeadersRead);
                 JObject repsonseAccounts = JsonConvert.DeserializeObject<JObject>(await response.Content.ReadAsStringAsync());
 

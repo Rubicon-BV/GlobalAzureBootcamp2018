@@ -8,6 +8,10 @@
     using System.Linq;
     using System;
     using System.Threading.Tasks;
+    using SimpleEchoBot.Models;
+    using SimpleEchoBot.Dynamics;
+    using Newtonsoft.Json.Linq;
+    using Newtonsoft.Json;
 
     [Serializable]
     public class PlanAppointment : LuisDialog<object>
@@ -68,12 +72,12 @@
                                 x.Type == "builtin.datetimeV2.time" ||
                                 x.Type == "builtin.datetimeV2.datetime" ||
                                 x.Type == "builtin.datetimeV2.datetimerange");
-             entity?
-                .Resolution?
-                .TryGetValue("values", out formattedValues);
+            entity?
+               .Resolution?
+               .TryGetValue("values", out formattedValues);
 
             // If no date indication, please ask for a date.
-            if(entity == null)
+            if (entity == null)
             {
                 await context.PostAsync($"When are you home to receive a mechanic?");
                 context.Wait(MessageReceived);
@@ -87,36 +91,23 @@
             Chronic.Parser parser = new Chronic.Parser();
             EntityRecommendation date = new EntityRecommendation();
             Chronic.Span resultSpan = null;
-            
+
             if (entity.Type == "builtin.datetimeV2.daterange")
             {
-                //var resolutionValues = (IList<object>)entity.Resolution["values"];
-                //foreach (var value in resolutionValues)
-                //{
-                //    this.startDate = Convert.ToDateTime(((IDictionary<string, object>)value)["start"]);
-                //    this.endDate = Convert.ToDateTime(((IDictionary<string, object>)value)["end"]);
-                //}
                 result.TryFindEntity("builtin.datetimeV2.daterange", out date);
                 resultSpan = parser.Parse(date.Entity);
             }
             else if (entity.Type == "builtin.datetimeV2.date")
             {
-                //var resolutionValues = (IList<object>)entity.Resolution["values"];
-                //foreach (var value in resolutionValues)
-                //{
-                //    this.startDate = Convert.ToDateTime(((IDictionary<string, object>)value)["value"]);
-                //}
-                //result.TryFindEntity("builtin.datetimeV2.timerange", out date);
-                //resultSpan = parser.Parse(date.Entity);
                 result.TryFindEntity("builtin.datetimeV2.date", out date);
                 resultSpan = parser.Parse(date.Entity);
             }
-            else if(entity.Type == "builtin.datetimeV2.timerange")
+            else if (entity.Type == "builtin.datetimeV2.timerange")
             {
                 result.TryFindEntity("builtin.datetimeV2.timerange", out date);
                 resultSpan = parser.Parse(date.Entity);
             }
-            else if(entity.Type == "builtin.datetimeV2.time")
+            else if (entity.Type == "builtin.datetimeV2.time")
             {
                 result.TryFindEntity("builtin.datetimeV2.time", out date);
                 resultSpan = parser.Parse(date.Entity);
@@ -134,20 +125,20 @@
                 context.Wait(MessageReceived);
                 return;
             }
-            else if(resultSpan.Start.Value <= DateTime.Now && resultSpan.End.Value <= DateTime.Now)
+            else if (resultSpan.Start.Value <= DateTime.Now && resultSpan.End.Value <= DateTime.Now)
             {
                 await context.PostAsync($"I understand you want this issue to be resolved already, but we can't go back in time to send a mechanic.");
                 context.Wait(MessageReceived);
                 return;
             }
-            else if(resultSpan.Start.Value.Date != resultSpan.End.Value.Date)
+            else if (resultSpan.Start.Value.Date != resultSpan.End.Value.Date)
             {
                 // We got a date range, let's pick a random date (and time).
                 await context.PostAsync($"Date range, let's pick a random date");
                 context.Wait(MessageReceived);
                 return;
             }
-            else if(resultSpan.Start.Value.TimeOfDay.Hours == 0)
+            else if (resultSpan.Start.Value.TimeOfDay.Hours == 0)
             {
                 // Midnight, assume that we didn't recieve a time frame and suggest some random times a day.
                 // GIVE TWO OPTIONS
@@ -155,7 +146,7 @@
                 context.Wait(MessageReceived);
                 return;
             }
-            else if(resultSpan.Start.Value.TimeOfDay.Hours == resultSpan.Start.Value.TimeOfDay.Hours)
+            else if (resultSpan.Start.Value.TimeOfDay.Hours == resultSpan.Start.Value.TimeOfDay.Hours)
             {
                 // We got a single time on that day
                 await context.PostAsync($"Sorry, there is no mechanic available at " + resultSpan.Start.Value.TimeOfDay.Hours + ".");
@@ -163,7 +154,7 @@
                 PromptDialog.Confirm(context, this.ConfirmMechanicDateTime, $"There is one available at " + (resultSpan.Start.Value.TimeOfDay.Hours + 1) + ", should I schedule that for you?");
                 return;
             }
-            else if(resultSpan.Start.Value.TimeOfDay.Hours != resultSpan.Start.Value.TimeOfDay.Hours)
+            else if (resultSpan.Start.Value.TimeOfDay.Hours != resultSpan.Start.Value.TimeOfDay.Hours)
             {
                 // Just have some fun, pick a random time on this day
                 await context.PostAsync($"Timeframe on a day, pick a random time");
@@ -184,9 +175,9 @@
             var realResult = await result;
             if (!realResult)
             {
-                var newMessage = context.MakeMessage();
                 await context.PostAsync("Ok, let's try to find a moment that works better.");
                 await context.PostAsync("When is a good time for you?");
+                context.Wait(MessageReceived);
                 return;
             }
             else
@@ -194,11 +185,42 @@
                 var scheduledDate = this.suggestedDate.Value.ToShortDateString();
                 var scheduledTime = this.suggestedDate.Value.ToShortTimeString();
 
-                await context.PostAsync($"Ok, scheduled for " + scheduledDate + " at " + scheduledTime + ".");
+                await context.PostAsync($"Thanks, I will schedule the appointment now.");
+                var createResult = await this.CreateServiceAppointment(this.suggestedDate.Value);
+                if (createResult)
+                {
+                    await context.PostAsync($"Ok, scheduled for " + scheduledDate + " at " + scheduledTime + ".");
+                }
+                else
+                {
+                    await context.PostAsync($"Sorry, something went wrong during scheduling. Are you available at another moment?");
+                    context.Wait(MessageReceived);
+                    return;
+                }
+
                 this.customerContext.AppointmentScheduledOn = this.suggestedDate;
                 context.Done(this.customerContext);
                 return;
             }
+        }
+
+        public async Task<bool> CreateServiceAppointment(DateTime serviceAppointment)
+        {
+            var description = string.IsNullOrWhiteSpace(this.customerContext.ErrorCode) ?
+                        $"Service appointment for broken CH ({this.customerContext.CustomerCv.ProductName})."
+                        : $"Service appointment for broken CH ({this.customerContext.CustomerCv.ProductName}). Error code: {this.customerContext.ErrorCode}.";
+
+            var request = new ServiceRequest()
+            {
+                CustomerId = this.customerContext.CustomerId,
+                Title = "Service appointment for " + this.customerContext.CustomerCv.ProductName,
+                Description = $"Service appointment for broken CH ({this.customerContext.CustomerCv.ProductName}). Error code: {this.customerContext.ErrorCode}.",
+                ScheduledOn = serviceAppointment
+            };
+
+            var response = await DynamicsHelper<ServiceRequest>.WriteToCrm(JsonConvert.SerializeObject(request), "incidents");
+            JObject createResult = JsonConvert.DeserializeObject<JObject>(await response.Content.ReadAsStringAsync());
+            return createResult == null;
         }
     }
 }

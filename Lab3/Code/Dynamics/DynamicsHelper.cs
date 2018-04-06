@@ -2,7 +2,6 @@
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using SimpleEchoBot.Models;
 
 namespace SimpleEchoBot.Dynamics
@@ -14,7 +13,7 @@ namespace SimpleEchoBot.Dynamics
     public static class DynamicsHelper<T>
     {
         private static HttpClient httpClient;
-        private static readonly HttpMethod HttpPatchMethod = new HttpMethod("PATCH");
+        private static readonly HttpMethod HttpPostMethod = new HttpMethod("POST");
 
         public static HttpClient HttpClient
         {
@@ -23,7 +22,7 @@ namespace SimpleEchoBot.Dynamics
                 if (httpClient == null)
                 {
                     ConnectToCRM();
-                }                
+                }
 
                 return httpClient;
             }
@@ -47,7 +46,7 @@ namespace SimpleEchoBot.Dynamics
             httpClient.DefaultRequestHeaders.Add("OData-Version", "4.0");
             httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
-        
+
         public static async Task<T> GetFromCrm(string query)
         {
             var response = await HttpClient.GetAsync(query, HttpCompletionOption.ResponseHeadersRead).ConfigureAwait(false);
@@ -68,7 +67,7 @@ namespace SimpleEchoBot.Dynamics
 
         public static async Task<HttpResponseMessage> WriteToCrm(string content, string url)
         {
-            var request = new HttpRequestMessage(HttpPatchMethod, url)
+            var request = new HttpRequestMessage(HttpPostMethod, url)
             {
                 Content = new StringContent(content, Encoding.UTF8, "application/json")
             };
