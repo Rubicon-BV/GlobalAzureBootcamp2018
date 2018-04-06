@@ -4,6 +4,8 @@
 
 ### Prerequisites
 
+- [Microsoft account](https://signup.live.com)
+
 The following programs / subscriptions are needed when taking our hands-on labs:
 
 - [Azure subscription](https://azure.microsoft.com/en-us/free/)
