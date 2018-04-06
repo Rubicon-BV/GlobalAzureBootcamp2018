@@ -12,7 +12,6 @@ Location
 
 Come prepared, read the [Prerequisites](Prerequisites.md)!
 
-Lab 1: Q&A  
-Lab 2: My CH Boiler (Luis) - Warranty  
-Lab 3: My CH Boiler (Luis) - Report fault  
-Lab 4: My CH Boiler - Make a service appointment
+[Lab 1: Q&A](/Lab1)  
+[Lab 2: My CH Boiler (Luis)](/Lab2)  
+[Lab 3: Connect to CRM](/Lab3)
