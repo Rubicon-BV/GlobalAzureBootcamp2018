@@ -26,7 +26,7 @@ _Our first action is to create a Q and A maker service_
 
 **Postman** is a popular API client that makes it easy for developers to create, share, test and document APIs. This is done by allowing users to create and save simple and complex HTTP/s requests, as well as read their responses. 
 
-Requirement: _You need to register an account to use Postman_
+**Requirement:** _You need to register an account to use Postman_
 
 _Our second action is to run a request via Postman_
 1. Go to [https://www.getpostman.com/apps](https://www.getpostman.com/apps)
@@ -59,28 +59,35 @@ _Our second action is to run a request via Postman_
  
 18.	Click on **Save**
 
-**#
-[ANNOTATION:
+**Requirement:** _Voorkeur voor Azure Engelstalig_ 
 
-BY &#39;Tim Lemmob&#39;
-ON &#39;2018-03-13T10:45:00&#39;TL
-NOTE: &#39;Aangeven dat van een engelse Azure interface uitgegaan wordt. (of iets anders)&#39;] ****Azure Bot Service**
+## 3. Azure Bot Service
 
 _Our third action is to create a bot via the Azure Bot Service and configure (and test) the channels Skype, Telegram and Facebook messenger._
 
 1. Go to the [Azure Portal](https://portal.azure.com/)
-2. Login with your Microsoft account, you need an Azure subscription
-3. Click on &quot;Create a resource&quot;, located in the top left corner of the screen
-4. Search for BOT
-5. Select &quot;Web App Bot&quot;, and click on &quot;Create&quot;
+2. Login with your Microsoft account, you need an **Azure subscription**
+3. Click on **Create a resource**, located in the top left corner of the screen
+4. Search for **BOT**
+5. Select _Web App Bot_, and click on **Create**
 6. Fill out the following fields
-  1. Bot name (in this example GABC-Testbot)
-  2. Subscription (choose your subscription)
-  3. Resource group (Create New)
-    1. Provide a name
-  4. Location (Select &quot;West Europe&quot;)
-  5.
-e.Pricing Tier (
+* Bot name (in this example GABC-Testbot)
+* Subscription (choose your **subscription**)
+* Resource group (**Create New**)
+* Provide a **name**
+* Location (Select **West Europe”**)
+* Pricing Tier (choose **S1 Premium messages/unit**)
+* App name (in this example GABC-Testbot)
+* Bot Template (choose Question and Answer template)
+* App service plan (Create New)
+** Provide a name
+** Select “West Europe”
+i.	Azure storage (Create New)
+i.	Provide a name
+j.	Application Insights (choose On)
+k.	Location (Select “West Europe”)
+l.	Microsoft App ID and password (choose Auto create App ID and Password)
+
 #
 [ANNOTATION:
 
