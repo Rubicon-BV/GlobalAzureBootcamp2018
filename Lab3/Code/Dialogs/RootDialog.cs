@@ -20,7 +20,7 @@ namespace SimpleEchoBot.Dialogs
         private string lastMessage;
 
         private bool shouldContinueWithLastMessage;
- 
+
         public RootDialog() : base(new LuisService(new LuisModelAttribute(
             ConfigurationManager.AppSettings["LuisAppId"],
             ConfigurationManager.AppSettings["LuisAPIKey"],
@@ -43,26 +43,6 @@ namespace SimpleEchoBot.Dialogs
         }
 
         [LuisIntent("BrokenBoiler")]
-        public async Task BrokenBoilerIntent(IDialogContext context, LuisResult result)
-        {
-            if (!customerContext.CustomerIdentified)
-            {
-                await context.PostAsync("I'm sorry to hear that!");
-                this.shouldContinueWithLastMessage = true;
-                this.lastMessage = result.Query;
-                await context.Forward(new IdentifyCustomerDialog(customerContext), this.ResumeAfterCustomerIdentification, context.Activity, CancellationToken.None);
-                return;
-            }
-            else if (customerContext.CustomerCv == null)
-            {
-                await context.Forward(new IdentifyCvDialog(customerContext), this.ResumeAfterCvIdentification, context.Activity, CancellationToken.None);
-                return;
-            }
-
-            context.Wait(MessageReceived);
-            return;
-        }
-
         [LuisIntent("ErrorCode")]
         public async Task ErrorCodeIntent(IDialogContext context, LuisResult result)
         {
@@ -91,7 +71,7 @@ namespace SimpleEchoBot.Dialogs
                 return;
 
             }
-            else if(string.IsNullOrWhiteSpace(errorCode) && this.customerContext.ErrorCodeAsked)
+            else if (string.IsNullOrWhiteSpace(errorCode) && this.customerContext.ErrorCodeAsked)
             {
                 errorCode = result.Query;
                 await context.PostAsync($"Ok, I will check the Q&A for error code: {errorCode}");
@@ -110,6 +90,22 @@ namespace SimpleEchoBot.Dialogs
         [LuisIntent("PlanDate")]
         public async Task PlanDateIntent(IDialogContext context, LuisResult result)
         {
+            if (!customerContext.CustomerIdentified)
+            {
+                await context.PostAsync("Sure, let's plan an appointment!");
+                this.shouldContinueWithLastMessage = true;
+                this.lastMessage = result.Query;
+                await context.Forward(new IdentifyCustomerDialog(customerContext), this.ResumeAfterCustomerIdentification, context.Activity, CancellationToken.None);
+                return;
+            }
+            else if (customerContext.CustomerCv == null)
+            {
+                this.shouldContinueWithLastMessage = true;
+                this.lastMessage = result.Query;
+                await context.Forward(new IdentifyCvDialog(customerContext), this.ResumeAfterCvIdentification, context.Activity, CancellationToken.None);
+                return;
+            }
+
             await context.Forward(new PlanAppointment(customerContext), this.ResumeAfterPlanDate, context.Activity, CancellationToken.None);
         }
 
@@ -153,7 +149,7 @@ namespace SimpleEchoBot.Dialogs
             if (this.customerContext.CustomerId.HasValue) // Customer identification successful.
             {
                 await context.PostAsync($"Welcome {this.customerContext.FirstName}");
-                if(this.shouldContinueWithLastMessage)
+                if (this.shouldContinueWithLastMessage)
                 {
                     var newMessage = context.MakeMessage();
                     newMessage.Text = this.lastMessage;
@@ -206,7 +202,7 @@ namespace SimpleEchoBot.Dialogs
         public async Task ResumeAfterMechanicPrompt(IDialogContext context, IAwaitable<bool> result)
         {
             var realResult = await result;
-            if(!realResult)
+            if (!realResult)
             {
                 await context.PostAsync($"Ok, good luck!");
                 context.Wait(MessageReceived);

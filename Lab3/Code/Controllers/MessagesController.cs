@@ -28,22 +28,22 @@ namespace Microsoft.Bot.Sample.SimpleEchoBot
                 if (activity.Type == ActivityTypes.Message)
                 {
                     await Conversation.SendAsync(activity, () => new RootDialog());
-                    //await Conversation.SendAsync(activity, () => new BasicLuisDialog());
                 }
                 else
                 {
                     HandleSystemMessage(activity);
                 }
+
                 var response = Request.CreateResponse(HttpStatusCode.OK);
                 return response;
-        }
+            }
             catch (Exception ex)
             {
                 var telemetryClient = new TelemetryClient();
-            telemetryClient.TrackException(ex);
-                    throw ex;
+                telemetryClient.TrackException(ex);
+                return Request.CreateErrorResponse(HttpStatusCode.NotImplemented, ex);
             }
-}
+        }
 
         private Activity HandleSystemMessage(Activity message)
         {
