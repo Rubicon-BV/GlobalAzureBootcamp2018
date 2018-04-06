@@ -7,7 +7,8 @@
 The following programs / subscriptions are needed when taking our hands-on labs:
 
 - [Azure subscription](https://azure.microsoft.com/en-us/free/)
-- [Visual Studio Code](https://code.visualstudio.com/)
+- [Visual Studio](https://www.visualstudio.com/vs/professional/) or [Visual Studio Code](https://code.visualstudio.com/)
+- [Postman](https://www.getpostman.com/)
 
 And to communicate with the chatbot, make sure you have accounts for:
 
