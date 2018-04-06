@@ -12,15 +12,13 @@ namespace SimpleEchoBot.Dialogs
     using SimpleEchoBot.Models;
     using SimpleEchoBot.Resources;
     using System.Linq;
-    using System;
-    using System.Collections.Generic;
 
     [System.Serializable]
-    public class IdentifyCvDialog : LuisDialog<object>
+    public class IdentifyChDialog : LuisDialog<object>
     {
         private DynamicsContextController customerContext;
 
-        public IdentifyCvDialog(DynamicsContextController customerContext) : base(new LuisService(new LuisModelAttribute(
+        public IdentifyChDialog(DynamicsContextController customerContext) : base(new LuisService(new LuisModelAttribute(
             ConfigurationManager.AppSettings["LuisAppId"],
             ConfigurationManager.AppSettings["LuisAPIKey"],
             domain: ConfigurationManager.AppSettings["LuisAPIHostName"])))
@@ -71,12 +69,11 @@ namespace SimpleEchoBot.Dialogs
             {
                 // No CV known
                 await context.PostAsync("No CH known.");
-                // TODO: custom cv identificatie
             }
             else if (salesOrderDetailsList.Count() == 1)
             {
                 // 1 CV known
-                this.customerContext.CustomerCv = salesOrderDetailsList.FirstOrDefault();
+                this.customerContext.CustomerCh = salesOrderDetailsList.FirstOrDefault();
                 context.Done(this.customerContext);
                 return;
             }
@@ -99,10 +96,10 @@ namespace SimpleEchoBot.Dialogs
 
         private async Task ResumeAfterCvChoise(IDialogContext context, IAwaitable<SalesOrderDetail> result)
         {
-            var customerCv = await result;
-            if (customerCv != null)
+            var CustomerCh = await result;
+            if (CustomerCh != null)
             {
-                this.customerContext.CustomerCv = customerCv;
+                this.customerContext.CustomerCh = CustomerCh;
                 context.Done(this.customerContext);
                 return;
             }

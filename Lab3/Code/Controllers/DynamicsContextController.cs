@@ -24,7 +24,7 @@ namespace SimpleEchoBot.Controllers
 
         public string FirstName = null;
 
-        public SalesOrderDetail CustomerCv = null;
+        public SalesOrderDetail CustomerCh = null;
 
         public string ErrorCode = null;
 

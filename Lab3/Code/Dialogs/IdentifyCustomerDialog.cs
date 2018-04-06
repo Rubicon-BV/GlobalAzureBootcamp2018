@@ -88,14 +88,14 @@ namespace SimpleEchoBot.Dialogs
                 }
                 else if (!string.IsNullOrWhiteSpace(customerNumber))
                 {
-                    // TODO: customer number is not yet a valid field in Dynamics CRM. Therefor only the emailaddress verification will work.
-                    searchType = "customer number";
-                    inverseSearchType = "emailaddress";
-                    requestContactsUri = $"contacts?$select=fullname,contactid,firstname&$top=5&$filter=(customernumber eq '{customerNumber}')";
+                    await context.PostAsync("Sorry, we can't identify based on customer number yet.");
+                    await context.PostAsync("Can you provide your emailaddress?");
+                    context.Wait(MessageReceived);
+                    return;
                 }
                 else
                 {
-                    await context.PostAsync("Can you provide your customer number or emailaddress?");
+                    await context.PostAsync("Can you provide your emailaddress?");
                     context.Wait(MessageReceived);
                     return;
                 }
@@ -137,7 +137,7 @@ namespace SimpleEchoBot.Dialogs
             }
             catch (Exception e)
             {
-                await context.PostAsync("Can you give me your customer number or email?");
+                await context.PostAsync("Can you give me your emailaddress?");
                 context.Wait(MessageReceived);
             }
         }

@@ -213,7 +213,7 @@
     <Compile Include="Dialogs\BasicLuisDialog.cs" />
     <Compile Include="Dialogs\EchoDialog.cs" />
     <Compile Include="Dialogs\IdentifyCustomerDialog.cs" />
-    <Compile Include="Dialogs\IdentifyCvDialog.cs" />
+    <Compile Include="Dialogs\IdentifyChDialog.cs" />
     <Compile Include="Dialogs\PlanAppointment.cs" />
     <Compile Include="Dialogs\RootDialog.cs" />
     <Compile Include="Dynamics\Authentication.cs" />
@@ -242,13 +242,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Connected Services\Application Insights\ConnectedService.json" />
-    <None Include="Properties\PublishProfiles\azurewebappbot-82a8 - Web Deploy.pubxml" />
-    <None Include="Properties\PublishProfiles\MyAzureasd - Web Deploy.pubxml" />
-    <None Include="Properties\PublishProfiles\rubiheat - FTP.pubxml" />
-    <None Include="Properties\PublishProfiles\rubiheat - Web Deploy.pubxml" />
-    <None Include="Properties\PublishProfiles\rubiheat20 - Web Deploy.pubxml" />
-    <None Include="Properties\PublishProfiles\testbotnba - FTP.pubxml" />
-    <None Include="Properties\PublishProfiles\testbotnba - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -259,7 +252,9 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Properties\PublishProfiles\" />
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\ContactInfo.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

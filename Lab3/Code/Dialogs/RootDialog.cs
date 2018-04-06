@@ -54,11 +54,11 @@ namespace SimpleEchoBot.Dialogs
                 await context.Forward(new IdentifyCustomerDialog(customerContext), this.ResumeAfterCustomerIdentification, context.Activity, CancellationToken.None);
                 return;
             }
-            else if (customerContext.CustomerCv == null)
+            else if (customerContext.CustomerCh == null)
             {
                 this.shouldContinueWithLastMessage = true;
                 this.lastMessage = result.Query;
-                await context.Forward(new IdentifyCvDialog(customerContext), this.ResumeAfterCvIdentification, context.Activity, CancellationToken.None);
+                await context.Forward(new IdentifyChDialog(customerContext), this.ResumeAfterCvIdentification, context.Activity, CancellationToken.None);
                 return;
             }
 
@@ -98,11 +98,11 @@ namespace SimpleEchoBot.Dialogs
                 await context.Forward(new IdentifyCustomerDialog(customerContext), this.ResumeAfterCustomerIdentification, context.Activity, CancellationToken.None);
                 return;
             }
-            else if (customerContext.CustomerCv == null)
+            else if (customerContext.CustomerCh == null)
             {
                 this.shouldContinueWithLastMessage = true;
                 this.lastMessage = result.Query;
-                await context.Forward(new IdentifyCvDialog(customerContext), this.ResumeAfterCvIdentification, context.Activity, CancellationToken.None);
+                await context.Forward(new IdentifyChDialog(customerContext), this.ResumeAfterCvIdentification, context.Activity, CancellationToken.None);
                 return;
             }
 
@@ -172,12 +172,12 @@ namespace SimpleEchoBot.Dialogs
                 var newMessage = context.MakeMessage();
                 newMessage.Text = this.lastMessage;
 
-                await context.PostAsync($"We see that you have a {this.customerContext.CustomerCv.ProductName}.");
+                await context.PostAsync($"We see that you have a {this.customerContext.CustomerCh.ProductName}.");
                 await this.MessageReceived(context, Awaitable.FromItem(newMessage));
                 return;
             }
 
-            await context.PostAsync($"We see that you have a {this.customerContext.CustomerCv.ProductName}. Does the boiler show a error code?");
+            await context.PostAsync($"We see that you have a {this.customerContext.CustomerCh.ProductName}. Does the boiler show a error code?");
             this.customerContext.ErrorCodeAsked = true;
             context.Wait(this.MessageReceived);
         }

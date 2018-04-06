@@ -207,14 +207,14 @@
         public async Task<bool> CreateServiceAppointment(DateTime serviceAppointment)
         {
             var description = string.IsNullOrWhiteSpace(this.customerContext.ErrorCode) ?
-                        $"Service appointment for broken CH ({this.customerContext.CustomerCv.ProductName})."
-                        : $"Service appointment for broken CH ({this.customerContext.CustomerCv.ProductName}). Error code: {this.customerContext.ErrorCode}.";
+                        $"Service appointment for broken CH ({this.customerContext.CustomerCh.ProductName})."
+                        : $"Service appointment for broken CH ({this.customerContext.CustomerCh.ProductName}). Error code: {this.customerContext.ErrorCode}.";
 
             var request = new ServiceRequest()
             {
                 CustomerId = this.customerContext.CustomerId,
-                Title = "Service appointment for " + this.customerContext.CustomerCv.ProductName,
-                Description = $"Service appointment for broken CH ({this.customerContext.CustomerCv.ProductName}). Error code: {this.customerContext.ErrorCode}.",
+                Title = "Service appointment for " + this.customerContext.CustomerCh.ProductName,
+                Description = $"Service appointment for broken CH ({this.customerContext.CustomerCh.ProductName}). Error code: {this.customerContext.ErrorCode}.",
                 ScheduledOn = serviceAppointment
             };
 
