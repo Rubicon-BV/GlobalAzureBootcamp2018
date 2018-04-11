@@ -1,4 +1,4 @@
-## LAB 1 QnA Maker
+## LAB 1
 This lab contains 5 steps:
 1.	Create your own QnA Maker service
 2. Utilize the QnA Maker API
