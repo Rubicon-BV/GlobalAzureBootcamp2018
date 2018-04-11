@@ -51,13 +51,14 @@ _Our second action is to run a request via Postman_
 
 14. Click on the **Body** tab.
 15. Select **Raw**
-16. On the body field add **{"question":"cw5"}** or **{"question":"hi"}*17. Click on **Send**, the following illustration is a sample result
+16. On the body field add **{"question":"cw5"}** or **{"question":"hi"}**
+17. Click on **Send**, the following illustration is a sample result
 
  ![Postman2](https://github.com/Rubicon-BV/GlobalAzureBootcamp2018/blob/master/Lab1/Pics/Postman2.png)
  
 18.	Click on **Save**
 
-**Requirement:** _Voorkeur voor Azure Engelstalig_ 
+**Requirement:** _We prefere an English version of Azure_ 
 
 ## 3. Azure Bot Service
 
