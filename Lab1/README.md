@@ -86,7 +86,7 @@ _Our third action is to create a bot via the Azure Bot Service and configure (an
 * Resource group (**Create New**)
 * Provide a **name** like RubiHeatBot
 * Location (Select **West Europe”**)
-* Pricing Tier (choose **S1 Premium messages/unit**)
+* Pricing Tier (choose **F0 Free**)
 * App name (in this example GABC-Testbot)
 * Bot Template (choose **Question and Answer template**)
 * App service plan **(Create New**)
