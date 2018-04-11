@@ -1,8 +1,11 @@
-# LAB 1 Our main goals for this LAB are:
+## LAB 1 Our main goals for this LAB are:
 ### 1.	Our first step is to create a QnA Maker service
 ### 2.	Connect your QnA Maker service to the Azure Bot Service 
 ### 3.	Enable your bot on channels like Skype and Telegram
 ### 4.	Embed your bot in your own website
+
+
+
 
 
 ## 1. QnA Maker
