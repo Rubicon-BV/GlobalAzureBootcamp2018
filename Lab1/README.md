@@ -40,7 +40,7 @@ Each published QnA Maker service is exposed as an HTTP endpoint that will take i
 **Postman** is a popular API client that makes it easy for developers to create, share, test and document APIs. This is done by allowing users to create and save simple and complex HTTP/s requests, as well as read their responses. 
 
 **Requirement:** _You need to register an account to use Postman_
-
+ 
 _Our second action is to run a request via Postman_
 1. Go to [https://www.getpostman.com/apps](https://www.getpostman.com/apps)
 2. Download the [Windows app](https://www.getpostman.com/apps) (…if running on Windows)
@@ -106,7 +106,7 @@ _Our third action is to create a bot via the Azure Bot Service and configure (an
 15. In the left menu of the Bot click on **Test the Webchat**
 * Type for example _hi_ or _CW 4/CW 5/CW 3_ and see if the webchat gives you an answer
 
-## Enable your bot on multiple channels like Skype and Telegram
+## 4. Enable your bot on multiple channels like Skype and Telegram
 1. In the left menu of the Bot click on **Channels**
 * [Skype Channel instructions](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-channel-connect-skype)
 * [Telegram Channel instructions](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-channel-connect-telegram)
