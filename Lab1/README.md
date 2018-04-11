@@ -31,8 +31,7 @@ _Our first action is to create a Q and A maker service_
 _Our second action is to run a request via Postman_
 1. Go to [https://www.getpostman.com/apps](https://www.getpostman.com/apps)
 2. Download the [Windows app](https://www.getpostman.com/apps) (…if running on Windows)
-3. Install and run
-4.	Click on **Request**, located under the tab _“Create new”_
+3. Install and ru4.	Click on **Request**, located under the tab _“Create new”_
 5.	Fill in the **Name** under _“Request name”_
 6. Click on **+Create collection”** and enter a name. If you have a collection, choose a collection
 7. Click on **Save**
@@ -62,7 +61,7 @@ _Our second action is to run a request via Postman_
 
 ## 3. Azure Bot Service
 
-_Our third action is to create a bot via the Azure Bot Service and configure (and test) the channels Skype, Telegram and Facebook messenger._
+_Our third action is to create a bot via the Azure Bot Service and configure (and test) the channels Skype and Telegram messenger._
 
 1. Go to the [Azure Portal](https://portal.azure.com/)
 2. Login with your Microsoft account, you need an **Azure subscription**
@@ -93,5 +92,7 @@ _Our third action is to create a bot via the Azure Bot Service and configure (an
 * QnAKnowledgebaseId (put your QandAmaker settings here, in our example _67c19131-d968-4a7e-9f16-feffb982d506_)
 * QnASubscriptionKey (put your QandAmaker settings here, in our example _8e132c2e5c3b43d98c66aa88ee1e9f73_)
 15. In the left menu of the Bot click on **Test the Webchat**
-  1. Type for example _hi_ or _CW 4/CW 5/CW 3_ and see if the webchat gives you an answer
-12. In the left menu of the Bot click on **Channels**
+* Type for example _hi_ or _CW 4/CW 5/CW 3_ and see if the webchat gives you an answer
+16. In the left menu of the Bot click on **Channels**
+* [Skype Channel instructions](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-channel-connect-skype)
+* [Telegram Channel instructions](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-channel-connect-telegram)
