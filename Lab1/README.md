@@ -112,4 +112,9 @@ _Our third action is to create a bot via the Azure Bot Service and configure (an
 * [Telegram Channel instructions](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-channel-connect-telegram)
 
 ## 5. Embed your bot in your own website
-adsfagfadgadg
+1. Open your resource group RubiHeatBot and open your App Service
+2.	On the left menu in the section delevepment tools choose App Service Editor (preview)
+3.	Click on Go and edit your own bot
+4.	In the blue top bar click on your own bot name and choose Browse website
+5. Your bot is running in your in website
+
