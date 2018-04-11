@@ -1,9 +1,9 @@
 ## LAB 1 QnA Maker
-This lab contains 4 steps:
+This lab contains 5 steps:
 1.	Create your own QnA Maker service
 2. Utilize the QnA Maker API
 3.	Connect your QnA Maker service to the Azure Bot Service 
-4.	Enable your bot on channels like Skype and Telegram
+4.	Enable your bot on multiple channels like Skype and Telegram
 5.	Embed your bot in your own website
 
 ## Step 1. QnA Maker
@@ -72,8 +72,6 @@ _Our second action is to run a request via Postman_
  
 18.	Click on **Save**
 
-**Requirement:** _We prefere an English version of Azure_ 
-
 ## 3. Azure Bot Service
 
 _Our third action is to create a bot via the Azure Bot Service and configure (and test) the channels Skype and Telegram messenger._
@@ -108,6 +106,11 @@ _Our third action is to create a bot via the Azure Bot Service and configure (an
 * QnASubscriptionKey (put your QandAmaker settings here, in our example _8e132c2e5c3b43d98c66aa88ee1e9f73_)
 15. In the left menu of the Bot click on **Test the Webchat**
 * Type for example _hi_ or _CW 4/CW 5/CW 3_ and see if the webchat gives you an answer
-16. In the left menu of the Bot click on **Channels**
+
+## 4. Channels
+In the left menu of the Bot click on **Channels**
 * [Skype Channel instructions](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-channel-connect-skype)
 * [Telegram Channel instructions](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-channel-connect-telegram)
+
+## 5. Embed your bot in your own website
+adsfagfadgadg
