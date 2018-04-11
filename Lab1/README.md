@@ -1,3 +1,10 @@
+# LAB 1 Our main goals for this LAB are:
+### 1.	Our first step is to create a QnA Maker service
+### 2.	Connect your QnA Maker service to the Azure Bot Service 
+### 3.	Enable your bot on channels like Skype and Telegram
+### 4.	Embed your bot in your own website
+
+
 ## 1. QnA Maker
 
 **Microsoft QnA Maker** is a free, easy-to-use, REST API and web-based service that trains AI to respond to user's questions in a more natural, conversational way. Compatible across development platforms, hosting services, and channels, QnA Maker is the only question and answer service with a graphical user interface—meaning you don’t need to be a developer to train, manage, and use it for a wide range of solutions.
