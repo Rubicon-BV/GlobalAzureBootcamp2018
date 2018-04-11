@@ -90,7 +90,7 @@ _Our third action is to create a bot via the Azure Bot Service and configure (an
 * App name (in this example GABC-Testbot)
 * Bot Template (choose **Question and Answer template**)
 * App service plan **(Create New**)
-* Provide a **name**
+* Provide a **name** like RubiHeatBot
 * Select **West Europe**
 7. Azure storage (**Create New**)
 * Provide a **name**
