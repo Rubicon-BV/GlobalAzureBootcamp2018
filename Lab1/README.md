@@ -81,19 +81,19 @@ _Our third action is to create a bot via the Azure Bot Service and configure (an
 4. Search for **BOT**
 5. Select _Web App Bot_, and click on **Create**
 6. Fill out the following fields
-* Bot name (in this example GABC-Testbot)
+* Bot name (in this example RubiHeatBot)
 * Subscription (choose your **subscription**)
 * Resource group (**Create New**)
 * Provide a **name** like RubiHeatBot
 * Location (Select **West Europe”**)
 * Pricing Tier (choose **F0 Free**)
-* App name (in this example GABC-Testbot)
+* App name (in this example RubiHeatBot)
 * Bot Template (choose **Question and Answer template**)
 * App service plan **(Create New**)
-* Provide a **name** 
+* Provide a **name** like RubiHeatBot 
 * Select **West Europe**
 7. Azure storage (**Create New**)
-* Provide a **name**
+* Provide a **name** like RubiHeatBot
 8. Application Insights (choose **On**)
 9. Location (Select **West Europe**)
 10. Microsoft App ID and password (choose **Auto create App ID and Password**)
