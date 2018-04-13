@@ -92,31 +92,8 @@
             EntityRecommendation date = new EntityRecommendation();
             Chronic.Span resultSpan = null;
 
-            if (entity.Type == "builtin.datetimeV2.daterange")
-            {
-                result.TryFindEntity("builtin.datetimeV2.daterange", out date);
-                resultSpan = parser.Parse(date.Entity);
-            }
-            else if (entity.Type == "builtin.datetimeV2.date")
-            {
-                result.TryFindEntity("builtin.datetimeV2.date", out date);
-                resultSpan = parser.Parse(date.Entity);
-            }
-            else if (entity.Type == "builtin.datetimeV2.timerange")
-            {
-                result.TryFindEntity("builtin.datetimeV2.timerange", out date);
-                resultSpan = parser.Parse(date.Entity);
-            }
-            else if (entity.Type == "builtin.datetimeV2.time")
-            {
-                result.TryFindEntity("builtin.datetimeV2.time", out date);
-                resultSpan = parser.Parse(date.Entity);
-            }
-            else if (entity.Type == "builtin.datetimeV2.datetime")
-            {
-                result.TryFindEntity("builtin.datetimeV2.datetime", out date);
-                resultSpan = parser.Parse(date.Entity);
-            }
+            result.TryFindEntity(entity.Type, out date);
+            resultSpan = parser.Parse(date.Entity);            
 
             // If we would have used a scheduling service, we could just feed it the dates and it would come up with a suggestion...
             if (!resultSpan.Start.HasValue && !resultSpan.End.HasValue)
