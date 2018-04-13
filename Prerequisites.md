@@ -4,7 +4,7 @@
 
 ### Prerequisites
 
-- [Microsoft account](https://signup.live.com)
+- [Microsoft Live account](https://signup.live.com)
 
 The following programs / subscriptions are needed when taking our hands-on labs:
 
@@ -15,5 +15,4 @@ The following programs / subscriptions are needed when taking our hands-on labs:
 And to communicate with the chatbot, make sure you have accounts for:
 
 - [Skype](https://www.skype.com/en/) and/or
-- [Telegram](https://telegram.org/) and/or
-- [Facebook](https://www.facebook.com)
+- [Telegram](https://telegram.org/)
