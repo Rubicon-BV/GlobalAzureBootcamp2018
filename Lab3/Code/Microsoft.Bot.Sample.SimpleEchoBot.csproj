@@ -211,6 +211,7 @@
     <Compile Include="Controllers\DynamicsContextController.cs" />
     <Compile Include="Controllers\MessagesController.cs" />
     <Compile Include="Dialogs\BasicLuisDialog.cs" />
+    <Compile Include="Dialogs\DialogTemplate.cs" />
     <Compile Include="Dialogs\EchoDialog.cs" />
     <Compile Include="Dialogs\IdentifyCustomerDialog.cs" />
     <Compile Include="Dialogs\IdentifyChDialog.cs" />
