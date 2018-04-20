@@ -16,10 +16,11 @@ With optimized machine learning logic and the ability to integrate industry-lead
 _Our first action is to create a QnA maker service_
 1. Go to the website https://qnamaker.ai/ and sign in with your Microsoft account
 2. Click on **Create new service**;
-3. Enter the **Name** of your service and the web page URL that contains your **FAQ** (you can also enter the questions and answers manually or you can upload a file with your questions and answers)
+3. Enter the **Name** of your service and the web page URL that contains your **FAQ** (you can also enter the questions and answers manually or you can upload a file with your questions and answers)  
 ![Create new QnA Service](https://github.com/Rubicon-BV/GlobalAzureBootcamp2018/blob/master/Lab1/Pics/CreateQnAService.png)
 4. For example you could use the URL of the Azure Support FAQs: https://azure.microsoft.com/en-us/support/faq/
-5. Click on **Create**https://azure.microsoft.com/en-us/support/faq/
+5. The site will import the **FAQ**…  
+![Create new QnA Service2](https://github.com/Rubicon-BV/GlobalAzureBootcamp2018/blob/master/Lab1/Pics/CreateQnAService2.png)
 6. Click after creating on the **pencil icon** at the right side
 7. Click on **Test** in the left side of the screen and test your application.
 8. Click on **Save and retrain**
