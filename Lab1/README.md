@@ -13,13 +13,10 @@ With optimized machine learning logic and the ability to integrate industry-lead
 
 ![QnA Maker Overview](https://github.com/Rubicon-BV/GlobalAzureBootcamp2018/blob/master/Lab1/Pics/botFrameworkArch.png)
 
-_Our first action is to create a Q and A maker service_
-1. Go to the website https://qnamaker.ai/
+_Our first action is to create a QnA maker service_
+1. Go to the website https://qnamaker.ai/ and sign in with your Mirosoft account
 2. Click on **Create new service**;
-3. Fill in the **Name** of your service
-4. Choose for adding:
-  * URL or a product manual page for a FAQ or
-  * Upload a FAQ file in the form of a PDF
+3. Enter the **Name** of your service and the web page URL that contains your FAQ (you can also enter the questions and answers manually or you can upload a file with your questions and answers).
 5. Click on **Create**
 6. Click after creating on the **pencil icon** at the right side
 7. Click on **Test** in the left side of the screen and test your application.
