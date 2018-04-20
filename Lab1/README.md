@@ -14,16 +14,20 @@ With optimized machine learning logic and the ability to integrate industry-lead
 ![QnA Maker Overview](https://github.com/Rubicon-BV/GlobalAzureBootcamp2018/blob/master/Lab1/Pics/botFrameworkArch.png)
 
 _Our first action is to create a QnA maker service_
-1. Go to the website https://qnamaker.ai/ and sign in with your Microsoft account
-2. Click on **Create new service**;
-3. Enter the **Name** of your service and the web page URL that contains your **FAQ** (you can also enter the questions and answers manually or you can upload a file with your questions and answers)  
+1. Go to the website https://qnamaker.ai/ and sign in with your Microsoft account.
+2. Click on **Create new service**.  
+![Create new QnA Service0](https://github.com/Rubicon-BV/GlobalAzureBootcamp2018/blob/master/Lab1/Pics/CreateQnAService0.png)
+3. Enter the **Name** of your service and the web page URL that contains your **FAQ** (you can also enter the questions and answers manually or you can upload a file with your questions and answers).  
 ![Create new QnA Service](https://github.com/Rubicon-BV/GlobalAzureBootcamp2018/blob/master/Lab1/Pics/CreateQnAService.png)
 4. For example you could use the URL of the Azure Support FAQs: https://azure.microsoft.com/en-us/support/faq/
 5. The site will import the **FAQ**…  
 ![Create new QnA Service2](https://github.com/Rubicon-BV/GlobalAzureBootcamp2018/blob/master/Lab1/Pics/CreateQnAService2.png)
-6. Click after creating on the **pencil icon** at the right side
-7. Click on **Test** in the left side of the screen and test your application.
-8. Click on **Save and retrain**
+6. ...then display it in a FAQ database. You can edit the content of the database on this screen.  
+![Create new QnA Service3](https://github.com/Rubicon-BV/GlobalAzureBootcamp2018/blob/master/Lab1/Pics/CreateQnAService3.png)
+7. The test screen allows you to chat with the Bot who responds by retrieving the appropriate answer from the FAQ database. This screen allows you to train the Bot by indicating what answer the Bot should give to a particular question, or by supplying a new answer.  
+![Create new QnA Service4](https://github.com/Rubicon-BV/GlobalAzureBootcamp2018/blob/master/Lab1/Pics/CreateQnAService4.png)
+8. When you have completed training, click the **Save and retrain** button. Finally, click the **Publish** button.
+![Create new QnA Service5](https://github.com/Rubicon-BV/GlobalAzureBootcamp2018/blob/master/Lab1/Pics/CreateQnAService5.png)
 9. After that click on **Publish**
 10. Click on **Publish** again
 11. **Save (by copy/paste)** the generated information. A sample of this information is illustrated in the image below.
