@@ -30,12 +30,10 @@ _Our first action is to create a QnA maker service_
 ![Create new QnA Service5](https://github.com/Rubicon-BV/GlobalAzureBootcamp2018/blob/master/Lab1/Pics/CreateQnAService5.png)
 9. You will see a confirmation screen. Click **Publish** again.  
 ![Create new QnA Service6](https://github.com/Rubicon-BV/GlobalAzureBootcamp2018/blob/master/Lab1/Pics/CreateQnAService6.png)
-10. Click on **Publish** again
+11. You will then be presented with the information needed to consume the Bot.  
 ![Create new QnA Service7](https://github.com/Rubicon-BV/GlobalAzureBootcamp2018/blob/master/Lab1/Pics/CreateQnAService7.png)
-11. You will then be presented with the information needed to consume the Bot.
+12. Note, you can always get back to these values by selecting **My services**, selecting the service, then **Settings**.  
 ![Create new QnA Service8](https://github.com/Rubicon-BV/GlobalAzureBootcamp2018/blob/master/Lab1/Pics/CreateQnAService8.png)
-12. Note, you can always get back to these values by selecting **My services**, selecting the service, then **Settings**.
-![Create new QnA Service9](https://github.com/Rubicon-BV/GlobalAzureBootcamp2018/blob/master/Lab1/Pics/CreateQnAService9.png)
 
 ## 2. Consume your QnA Maker service
 Each published QnA Maker service is exposed as an HTTP endpoint that will take in a question and respond back with the best matched answer and a confidence score. You need the following two GUIDs to access your knowledge base via the HTTP endpoint
