@@ -47,34 +47,15 @@ Each published QnA Maker service is exposed as an HTTP endpoint that will take i
 _Our second action is to run an API request via Postman_
 1. Go to [https://www.getpostman.com/apps](https://www.getpostman.com/apps)
 2. Install and run Postman.
-3. Now let’s send our API request!
+3. Now let’s create our API request!
   - Change method to **POST**
   - Combine the **Host URL** and **Post URL** from step 1.11  
   For example: https://westus.api.cognitive.microsoft.com/qnamaker/v2.0/knowledgebases/0b16d1ff-e23a-4ce1-b7ef-77bece70314c/generateAnswer
-  - Add these two headers:
-| Key | Value |
-| --- | --- |
-| Ocp-Apim-Subscription-Key | …from step 1.11 |
-| Content-Type | …from step 1.11 |
-  
-  
+  - Headers
+    - Add header Ocp-Apim-Subscription-Key with your key from step 1.11
+    For example: 00bd519ba9784c6aae0f33acef7a1d1c
+    - Add header Content-Type with value "application/json"
 ![Postman1](https://github.com/Rubicon-BV/GlobalAzureBootcamp2018/blob/master/Lab1/Pics/Postman1.png)
-6. Click on **+Create collection”** and enter a name. If you have a collection, choose a collection
-7. Click on **Save**
-8. Change the _GET_ function into **POST**
-9. Copy the **Host URL** from _step 11_ in the previous chapter and paste this HOST URL after the Post Function within Postman.
-10. Copy the **POST URL** from _step 11_ in the previous chapter and paste this URL after the HOST URL in the Post Function within Postman.
-11. Ensure **Inherith auth from parent** is selected as **Type** under the _Authorization_ tab.
-12. Click on the **Headers** tab.
-13. Enter the following key/value pairs (gathered from the generated input from step 11 in the previous chapter):
-
-| Key | Value |
-| --- | --- |
-| Ocp-Apim-Subscription-Key | …from step 1.11 |
-| Content-Type | …from step 1.11 |
-
- ![Postman1](https://github.com/Rubicon-BV/GlobalAzureBootcamp2018/blob/master/Lab1/Pics/Postman1.png)
-
 14. Click on the **Body** tab.
 15. Select **Raw**
 16. On the body field add **{"question":"cw5"}** or **{"question":"hi"}**
