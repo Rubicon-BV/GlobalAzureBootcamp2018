@@ -52,18 +52,14 @@ _Our second action is to run an API request via Postman_
   - Combine the **Host URL** and **Post URL** from step 1.11  
   For example: https://westus.api.cognitive.microsoft.com/qnamaker/v2.0/knowledgebases/0b16d1ff-e23a-4ce1-b7ef-77bece70314c/generateAnswer
   - Headers
-    - Add header Ocp-Apim-Subscription-Key with your key from step 1.11
+    - Add header Ocp-Apim-Subscription-Key with your subscription key from step 1.11  
     For example: 00bd519ba9784c6aae0f33acef7a1d1c
     - Add header Content-Type with value "application/json"
 ![Postman1](https://github.com/Rubicon-BV/GlobalAzureBootcamp2018/blob/master/Lab1/Pics/Postman1.png)
-14. Click on the **Body** tab.
-15. Select **Raw**
-16. On the body field add **{"question":"cw5"}** or **{"question":"hi"}**
-17. Click on **Send**, the following illustration is a sample result
-
- ![Postman2](https://github.com/Rubicon-BV/GlobalAzureBootcamp2018/blob/master/Lab1/Pics/Postman2.png)
- 
-18.	Click on **Save**
+4. On the **Body** select **Raw** and in the body field add **{"question":"hi"}**  
+![Postman2](https://github.com/Rubicon-BV/GlobalAzureBootcamp2018/blob/master/Lab1/Pics/Postman2.png)
+5. Click on **Send**, the following illustration is a sample result  
+![Postman2](https://github.com/Rubicon-BV/GlobalAzureBootcamp2018/blob/master/Lab1/Pics/Postman2.png)
 
 ## 3. Connect your QnA Maker service to the Azure Bot Service 
 
