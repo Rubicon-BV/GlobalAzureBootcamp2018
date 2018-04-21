@@ -45,6 +45,7 @@ Each published QnA Maker service is exposed as an HTTP endpoint that will take i
 **Postman** is a popular API client that makes it easy for developers to create, share, test and document APIs. This is done by allowing users to create and save simple and complex HTTP/s requests, as well as read their responses. 
 
 _Our second action is to run an API request via Postman_
+
 1. Go to [https://www.getpostman.com/apps](https://www.getpostman.com/apps)
 2. Install and run Postman.
 3. Now let’s create our API request!
@@ -90,8 +91,9 @@ _Our third action is to consume our QnA Maker service in the Azure Bot Service._
 ![AzureBotService1](https://github.com/Rubicon-BV/GlobalAzureBootcamp2018/blob/master/Lab1/Pics/AzureBotService1.png)
 7. Double check your input and make sure that you have chosen the **"Question and Answer Template"** and checked the **"Pin to dashboard"** box  
 Click **Create**
-8. It will take a while to deploy your bot, relax and wait till your bot is deployed. You can check the status on your dashboard (if you checked the "Pin to dashboard" box on creation).
-9. On the left menu of the Bot click on **Application settings**
+8. It will take a while to deploy your bot, relax and wait till your bot is deployed. You can check the status on your dashboard (if you checked the "Pin to dashboard" box on creation). In the mean time check your resource group and make sure that it contains the following resources:  
+![AzureBotService1](https://github.com/Rubicon-BV/GlobalAzureBootcamp2018/blob/master/Lab1/Pics/AzureBotService1.png)
+9. Open your bot and click **Application settings**
 13. Under the section **App settings**, you find:
 * QnAKnowledgebaseId (put your QandAmaker settings here, for example _67c19131-d968-4a7e-9f16-feffb982d506_)
 * QnASubscriptionKey (put your QandAmaker settings here, for example _8e132c2e5c3b43d98c66aa88ee1e9f73_)
