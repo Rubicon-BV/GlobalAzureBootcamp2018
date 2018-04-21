@@ -92,7 +92,7 @@ _Our third action is to consume our QnA Maker service in the Azure Bot Service._
 7. Double check your input and make sure that you have chosen the **"Question and Answer Template"** and checked the **"Pin to dashboard"** box  
 Click **Create**
 8. It will take a while to deploy your bot, relax and wait till your bot is deployed. You can check the status on your dashboard (if you checked the "Pin to dashboard" box on creation). In the mean time check your resource group and make sure that it contains the following resources:  
-![AzureBotService1](https://github.com/Rubicon-BV/GlobalAzureBootcamp2018/blob/master/Lab1/Pics/AzureBotService1.png)
+![Resourcegroup](https://github.com/Rubicon-BV/GlobalAzureBootcamp2018/blob/master/Lab1/Pics/Resourcegroup.png)
 9. Open your bot and click **Application settings**
 13. Under the section **App settings**, you find:
 * QnAKnowledgebaseId (put your QandAmaker settings here, for example _67c19131-d968-4a7e-9f16-feffb982d506_)
@@ -113,7 +113,8 @@ _Our fourth action is to connect our bot to Skype or Telegram._
 ## 5. Embed your bot in your own website
 This step is optional for the really quick participants of this lab. Show off your HTML and CSS skills.
 
-1. Open your resource group (for example GABZAzureSupportBot) and open your App Service
+1. Open your resource group (for example GABZAzureSupportBot) and open your App Service  
+![Resourcegroup](https://github.com/Rubicon-BV/GlobalAzureBootcamp2018/blob/master/Lab1/Pics/Resourcegroup.png)
 2.	On the left menu in the section development tools choose App Service Editor (preview)
 3.	Click Go and edit your own bot
 4.	In the blue top bar click on your own bot name and choose Browse website
