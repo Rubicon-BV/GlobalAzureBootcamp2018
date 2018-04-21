@@ -124,6 +124,6 @@ This step is optional for the really quick participants of this lab. Show off yo
 ![Embed4](https://github.com/Rubicon-BV/GlobalAzureBootcamp2018/blob/master/Lab1/Pics/Embed4.png)
 5. Tweak your HTML and click in the blue top bar on your bot name and choose Browse Web Site  
 ![Embed5](https://github.com/Rubicon-BV/GlobalAzureBootcamp2018/blob/master/Lab1/Pics/Embed5.png)
-6. Your bot is running in your own website  
+6. Your bot is running in your own website, now try to embed your Skype channel for extra kudos
 
 Well done! Show us your awesome bot website based on a QnA Maker service. You rock!!!!! Thanks for staying with us till the very end of this lab.
