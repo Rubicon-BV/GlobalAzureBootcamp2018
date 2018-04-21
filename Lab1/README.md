@@ -73,29 +73,30 @@ _Our third action is to consume our QnA Maker service in the Azure Bot Service._
 4. Search for **bot**
 5. Select _Web App Bot_, and click **Create**
 6. Fill out the following fields
-* Bot name (for example: "Azure Support Bot")
+* Bot name (for example: "GABCAzureSupportBot")
 * Subscription (choose your **subscription**)
 * Resource group (**Create New**)
-* Provide a **name** (for example "Azure Support Bot")
+* Provide a **name** (for example "GABCAzureSupportBot")
 * Location (Select **West Europe”**)
 * Pricing Tier (choose **F0 Free**)
-* App name (for example "Azure Support Bot")
+* App name (for example "GABCAzureSupportBot")
 * Bot Template (choose **Question and Answer template**)
 * App service plan **(Create New**)
-* Provide a **name** (for example "Azure Support Bot")
+* Provide a **name** (for example "GABCAzureSupportBot")
 * Select **West Europe**
-7. Azure storage (**Create New**)
-* Provide a **name** (for example "Azure Support Bot")
-8. Application Insights (choose **On**)
-9. Location (Select **West Europe**)
-10. Microsoft App ID and password (choose **Auto create App ID and Password**)
-11. Click on **Create**
-12. When the bot is finished click on the right side **Go to resource**
-13. On the left menu of the Bot click on **Application settings**
-14. Under the section **App settings**, you find:
+* Azure storage (**Create New**)
+* Provide a **name** (for example "GABCAzureSupportBot")
+* Application Insights (choose **Off**)
+* Microsoft App ID and password (choose **Auto create App ID and Password**)
+![AzureBotService1](https://github.com/Rubicon-BV/GlobalAzureBootcamp2018/blob/master/Lab1/Pics/AzureBotService1.png)
+7. Double check your input and make sure that you have chosen the **Question and Answer Template** and checked the   
+Click **Create**
+8. It will take a while to create your bot, relax and wait till your bot is created.When the bot is finished click on the right side **Go to resource**
+9. On the left menu of the Bot click on **Application settings**
+13. Under the section **App settings**, you find:
 * QnAKnowledgebaseId (put your QandAmaker settings here, for example _67c19131-d968-4a7e-9f16-feffb982d506_)
 * QnASubscriptionKey (put your QandAmaker settings here, for example _8e132c2e5c3b43d98c66aa88ee1e9f73_)
-15. In the left menu of the Bot click on **Test the Webchat**
+14. In the left menu of the Bot click on **Test the Webchat**
 * Type for example _hi_ and see if the webchat gives you an answer
 
 ## 4. Enable your bot on multiple channels like Skype and Telegram
