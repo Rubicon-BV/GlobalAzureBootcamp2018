@@ -122,7 +122,7 @@ This step is optional for the really quick participants of this lab. Show off yo
 4.	Get your embed code from the Web Chat channel  
 ![Embed3](https://github.com/Rubicon-BV/GlobalAzureBootcamp2018/blob/master/Lab1/Pics/Embed3.png)  
 ![Embed4](https://github.com/Rubicon-BV/GlobalAzureBootcamp2018/blob/master/Lab1/Pics/Embed4.png)
-5. Tweak your HTML and click in the blue top bar click on your own bot name and choose Browse website  
+5. Tweak your HTML and click in the blue top bar on your bot name and choose Browse Web Site  
 ![Embed5](https://github.com/Rubicon-BV/GlobalAzureBootcamp2018/blob/master/Lab1/Pics/Embed5.png)
 6. Your bot is running in your own website  
 
