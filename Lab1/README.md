@@ -88,28 +88,31 @@ _Our third action is to consume our QnA Maker service in the Azure Bot Service._
 * Application Insights (choose **Off**)
 * Microsoft App ID and password (choose **Auto create App ID and Password**)
 ![AzureBotService1](https://github.com/Rubicon-BV/GlobalAzureBootcamp2018/blob/master/Lab1/Pics/AzureBotService1.png)
-7. Double check your input and make sure that you have chosen the **Question and Answer Template** and checked the   
+7. Double check your input and make sure that you have chosen the **"Question and Answer Template"** and checked the **"Pin to dashboard"** box  
 Click **Create**
-8. It will take a while to create your bot, relax and wait till your bot is created.When the bot is finished click on the right side **Go to resource**
+8. It will take a while to deploy your bot, relax and wait till your bot is deployed. You can check the status on your dashboard (if you checked the "Pin to dashboard" box on creation).
 9. On the left menu of the Bot click on **Application settings**
 13. Under the section **App settings**, you find:
 * QnAKnowledgebaseId (put your QandAmaker settings here, for example _67c19131-d968-4a7e-9f16-feffb982d506_)
 * QnASubscriptionKey (put your QandAmaker settings here, for example _8e132c2e5c3b43d98c66aa88ee1e9f73_)
-14. In the left menu of the Bot click on **Test the Webchat**
-* Type for example _hi_ and see if the webchat gives you an answer
+![AzureBotService2](https://github.com/Rubicon-BV/GlobalAzureBootcamp2018/blob/master/Lab1/Pics/AzureBotService2.png)
+14. In the left menu of the Bot click **Test in Web Chat**
+* Type for example _hi_ and see if the webchat provides an answer
+![AzureBotService3](https://github.com/Rubicon-BV/GlobalAzureBootcamp2018/blob/master/Lab1/Pics/AzureBotService3.png)
 
 ## 4. Enable your bot on multiple channels like Skype and Telegram
 A channel is the connection between the Bot Framework and communication apps. You configure a bot to connect to the channels you want it to be available on. For example, a bot connected to the Skype channel can be added to a contact list and people can interact with it in Skype.
 
-_Our third fourth is to connect our bot to Skype and Telegram._
+_Our fourth action is to connect our bot to Skype or Telegram._
 
 * [Skype Channel instructions](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-channel-connect-skype)
 * [Telegram Channel instructions](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-channel-connect-telegram)
 
 ## 5. Embed your bot in your own website
-1. Open your resource group RubiHeatBot and open your App Service
-2.	On the left menu in the section delevepment tools choose App Service Editor (preview)
-3.	Click on Go and edit your own bot
-4.	In the blue top bar click on your own bot name and choose Browse website
-5. Your bot is running in your in website
+This step is optional for the really quick participants of this lab. Show off your HTML and CSS skills.
 
+1. Open your resource group (for example GABZAzureSupportBot) and open your App Service
+2.	On the left menu in the section development tools choose App Service Editor (preview)
+3.	Click Go and edit your own bot
+4.	In the blue top bar click on your own bot name and choose Browse website
+5. Your bot is running in your own website
