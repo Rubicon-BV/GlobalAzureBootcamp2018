@@ -54,9 +54,8 @@ _Our second action is to run an API request via Postman_
   - Headers
     - Add header Ocp-Apim-Subscription-Key with your subscription key from step 1.11  
     For example: 00bd519ba9784c6aae0f33acef7a1d1c
-    - Add header Content-Type with value "application/json"
-
-![Postman1](https://github.com/Rubicon-BV/GlobalAzureBootcamp2018/blob/master/Lab1/Pics/Postman1.png)
+    - Add header Content-Type with value "application/json"  
+    ![Postman1](https://github.com/Rubicon-BV/GlobalAzureBootcamp2018/blob/master/Lab1/Pics/Postman1.png)
 4. On the **Body** select **Raw** and in the body field add **{"question":"hi"}**  
 ![Postman2](https://github.com/Rubicon-BV/GlobalAzureBootcamp2018/blob/master/Lab1/Pics/Postman2.png)
 5. Click **Send**, and study the result  
